@@ -14,3 +14,10 @@ export const textMode = {
   h5: "h5",
   h6: "h6",
 };
+export const fileInitialState = {
+  file: "",
+  triggerUpload: false,
+  isUploadedSuccessfull: false,
+  isUploading: false,
+  isFaildUpload: false,
+};

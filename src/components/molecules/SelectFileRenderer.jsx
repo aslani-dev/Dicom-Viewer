@@ -7,7 +7,14 @@ import PropTypes from "prop-types";
 
 function SelectFileRenderer({ handleFileChange }) {
   return (
-    <div className="select-file ">
+    <div
+      className="select-file "
+      onDrop={(e) => {
+        e.preventDefault();
+        console.log(e);
+      }}
+      onDragOver={(e) => e.preventDefault()}
+    >
       <div className="select-file-container">
         <div className="file-icon">
           <FaFileMedical />
