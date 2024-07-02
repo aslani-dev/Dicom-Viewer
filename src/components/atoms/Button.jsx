@@ -12,11 +12,11 @@ function Button({ onClick, children, mode, className, ...rest }) {
     },
     className
   );
-  
+
   return (
-    <div id="button" onClick={onClick} className={classes} {...rest}>
+    <button onClick={onClick} className={classes} {...rest}>
       {children}
-    </div>
+    </button>
   );
 }
 Button.propTypes = {

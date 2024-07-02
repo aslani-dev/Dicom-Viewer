@@ -7,12 +7,12 @@
 =============================================*/
 .button {
   cursor: pointer;
-  font-size: t.$fs-base;
+  font-size: v.$fs-base;
   font-weight: 400;
   line-height: normal;
   box-sizing: border-box;
   border: none;
-  display: inline-block;
+  position: relative;
 }
 
 /*----------  button primary  ----------*/
@@ -26,10 +26,9 @@
 }
 .btn-text {
   color: c.$btn-txt-color;
-  background-color: c.$white;
-  margin-inline: v.$spacing-sm;
+  background-color: v.$white;
   &:hover {
-    background-color: c.$btn-txt-hover;
+    color: c.$btn-txt-hover;
   }
 }
 

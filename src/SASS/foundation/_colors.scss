@@ -5,7 +5,7 @@
 =============================================*/
 
 $body-text-color: var(--dse-body-text-color, v.$black) !default;
-$body-bg-color: var(--dse-body-bg-color, v.$white) !default;
+$body-bg-color: var(--dse-body-bg-color, v.$grey-100) !default;
 
 /*=====  End of Global body color  ======*/
 
@@ -23,11 +23,8 @@ $btn-primary-color: var(--dse-btn-primary-color, v.$white) !default;
 $btn-primary-bg-color: var(--dse-btn-primary-bg-color, v.$blue-light) !default;
 $btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, v.$blue-dark) !default;
 
-$btn-txt-color: var(
-  --dse-btn-txt-color,
-  v.$blue-light
-) !default;
-$btn-txt-hover: var(--dse-btn-txt-hover, v.$blue-dark) !default;
+$btn-txt-hover: var(--dse-btn-txt-hover, v.$blue-light) !default;
+$btn-txt-color: var(--dse-btn-txt-color, v.$blue-dark) !default;
 
 /*=====  End of Buttons  ======*/
 
@@ -123,20 +120,8 @@ $select-file-icon-bg-color: var(
 /*=============================================
 =                 Table colors                =
 =============================================*/
-$table-bg-color: var(
-  --dse-table-bg-color,
-  v.$white
-) !default;
-$table-delete-icon-color: var(
-  --dse-table-delete-icon-color,
-  v.$white
-) !default;
-$table-title-bg-color: var(
-  --dse-table-title-bg-color,
-  v.$grey-600
-) !default;
-
+$table-bg-color: var(--dse-table-bg-color, v.$white) !default;
+$table-delete-icon-color: var(--dse-table-delete-icon-color, v.$white) !default;
+$table-title-bg-color: var(--dse-table-title-bg-color, v.$grey-600) !default;
 
 /*=====  End of Table colors  ======*/
-
-

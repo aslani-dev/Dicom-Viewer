@@ -1,15 +1,14 @@
 @use "../foundation/variables" as v;
 
-
 :root {
   --dse-body-text-color: #{v.$black};
-  --dse-body-bg-color: #{v.$white};
+  --dse-body-bg-color: #{v.$grey-100};
   --dse-subtitle-color: #{v.$grey-500};
   --dse-btn-primary-color: #{v.$white};
   --dse-btn-primary-bg-color: #{v.$blue-light};
   --dse-btn-primary-bg-hover: #{v.$blue-dark};
-  --dse-btn-txt-color: #{v.$blue-light};
-  --dse-btn-txt-hover: #{v.$blue-dark};
+  --dse-btn-txt-hover: #{v.$blue-light};
+  --dse-btn-txt-color: #{v.$blue-dark};
   --dse-form-color: #{v.$black};
   --dse-form-bg-color: #{v.$white};
   --dse-input-color: #{v.$black};

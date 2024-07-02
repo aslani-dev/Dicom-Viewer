@@ -1,3 +1,7 @@
+@use '../foundation/colors' as c;
+body,#root{
+  background-color: c.$body-bg-color;
+}
 #root {
   margin: 0 auto;
   padding: 2rem;
@@ -8,3 +12,6 @@
   padding: 0;
   box-sizing: border-box;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

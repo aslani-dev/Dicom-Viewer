@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { textMode } from "../../Helper/constants";
+import classNames from "classnames";
 
 function Text({ children, mode, className, element, ...rest }) {
   const classes = classNames(
@@ -30,7 +31,17 @@ Text.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
   rest: PropTypes.any,
-  element: "p" | "span" | "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
-  mode: PropTypes.oneOf(Object.keys(textMode).map((key) => textMode(key))),
+  element: PropTypes.oneOf([
+    "p",
+    "span",
+    "div",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+  ]),
+  mode: PropTypes.oneOf(Object.keys(textMode).map((key) => textMode[key])),
 };
 export default Text;

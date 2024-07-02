@@ -1,0 +1,31 @@
+@use "../foundation/colors" as c;
+@use "../foundation/variables" as v;
+@use "../foundation/mixins" as m;
+.select-file {
+  background-color: c.$select-file-bg-color;
+  border-radius: v.$spacing-sm;
+  border: 3px solid rgb(from c.$select-file-border-color r g b / 0.4);
+  cursor: auto;
+}
+.select-file-container {
+  border: 3px dashed c.$select-file-border-color;
+  padding-block: v.$spacing-lg;
+  border-radius: v.$spacing-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: v.$spacing-xxs;
+}
+.file-icon {
+  background-color: c.$select-file-icon-bg-color;
+  color: c.$select-file-icon-color;
+  border-radius: 100%;
+  padding: v.$spacing-xs;
+  width: v.$spacing-xxl * 1.3;
+  height: v.$spacing-xxl * 1.3;
+  margin-bottom: v.$spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
