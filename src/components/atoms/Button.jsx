@@ -9,10 +9,10 @@ function Button({ onClick, children, mode, className, ...rest }) {
     {
       "btn-primary": mode === buttonMode.primary,
       "btn-text": mode === buttonMode.text,
-      "btn-disable": mode === buttonMode.disable,
     },
     className
   );
+  
   return (
     <div id="button" onClick={onClick} className={classes} {...rest}>
       {children}

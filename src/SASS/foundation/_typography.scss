@@ -1,13 +1,18 @@
 @use "./variables" as v;
+
 /*=============================================
-=                body font sizes              =
+=                common font sizes              =
 =============================================*/
 $body-font-size: var(--dse-body-font-size, v.$fs-base);
 $body-font-weight: var(--dse-body-font-weight, 400);
 
+$title-font-size: var(--dse-title-font-size, v.$fs-xxl);
+$title-font-weight: var(--dse-title-font-weight, 600);
+
+$subtitle-font-size: var(--dse-subtitle-font-size, v.$fs-sm);
+$subtitle-font-weight: var(--dse-subtitle-font-weight, 400);
 
 /*=====  End of Body font sizes  ======*/
-
 
 /*=============================================
 =            Heading font sizes            =
@@ -25,8 +30,4 @@ $h5-font-weight: var(--dse-h5-font-weight, 400);
 $h6-font-size: var(--dse-h6-font-size, v.$h-6);
 $h6-font-weight: var(--dse-h6-font-weight, 300);
 
-
 /*=====  End of Heading font sizes  ======*/
-
-
-
