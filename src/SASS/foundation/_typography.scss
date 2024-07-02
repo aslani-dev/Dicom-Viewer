@@ -1,0 +1,30 @@
+@use "./variables" as v;
+/*=============================================
+=                body font sizes              =
+=============================================*/
+$body-font-size: var(--dse-body-font-size, v.$fs-base);
+$body-font-weight: var(--dse-body-font-weight, 400);
+
+
+/*=====  End of Body font sizes  ======*/
+
+
+/*=============================================
+=            Heading font sizes            =
+=============================================*/
+$h1-font-size: var(--dse-h1-font-size, v.$h-1);
+$h1-font-weight: var(--dse-h1-font-weight, 900);
+$h2-font-size: var(--dse-h2-font-size, v.$h-2);
+$h2-font-weight: var(--dse-h2-font-weight, 700);
+$h3-font-size: var(--dse-h3-font-size, v.$h-3);
+$h3-font-weight: var(--dse-h3-font-weight, 600);
+$h4-font-size: var(--dse-h4-font-size, v.$h-4);
+$h4-font-weight: var(--dse-h4-font-weight, 400);
+$h5-font-size: var(--dse-h5-font-size, v.$h-5);
+$h5-font-weight: var(--dse-h5-font-weight, 400);
+$h6-font-size: var(--dse-h6-font-size, v.$h-6);
+$h6-font-weight: var(--dse-h6-font-weight, 300);
+
+
+/*=====  End of Heading font sizes  ======*/
+

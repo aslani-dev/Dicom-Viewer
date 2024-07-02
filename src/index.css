@@ -1,5 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  --dse-body-text-color: #000;
+  --dse-body-bg-color: #fff;
+  --dse-subtitle-color: #c8d5f7;
+  --dse-btn-primary-color: #fff;
+  --dse-btn-primary-bg-color: #5c4baa;
+  --dse-btn-primary-bg-hover: #372ce2;
+  --dse-txt-btn-primary-color: #5c4baa;
+  --dse-txt-btn-primary-hover: #372ce2;
+  --dse-form-color: #000;
+  --dse-form-bg-color: #fff;
+  --dse-input-color: #000;
+  --dse-input-empty-color: #eef2fe;
+  --dse-input-border-color: #ccd9e9;
+  --dse-input-border-focus-color: #000;
+  --dse-input-error-color: #f63f5e;
+  --dse-input-error-border-color: #f63f5e;
+  --dse-upload-container-bg-color: #fff;
+  --dse-upload-container-color: #000;
+  --dse-upload-progress-indicator-bg-color: #372ce2;
+  --dse-upload-progress-track-bg-color: #dcdcdc;
+  --dse-upload-file-icon-color: #372ce2;
+  --dse-upload-file-icon-bg-color: #eef2fe;
+  --dse-upload-progress-successfull-color: #21c35c;
+  --dse-upload-successfull-icon-color: #21c35c;
+  --dse-upload-progress-failed-color: #f63f5e;
+  --dse-upload-failed-delete-color: #f63f5e;
+  --dse-upload-file-icon-color: #f63f5e;
+  --dse-upload-file-icon-bg-color: #fff1f1;
+  --dse-select-file-bg-color: #fff;
+  --dse-select-file-border-color: #ccd9e9;
+  --dse-select-file-icon-color: #372ce2;
+  --dse-select-file-icon-bg-color: #eef2fe;
+  --dse-table-bg-color: #fff;
+  --dse-table-delete-icon-color: #fff;
+  --dse-table-title-bg-color: #f7f7f7;
+}
+
+/*# sourceMappingURL=index.css.map */
