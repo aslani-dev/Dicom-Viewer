@@ -23,11 +23,11 @@ $btn-primary-color: var(--dse-btn-primary-color, v.$white) !default;
 $btn-primary-bg-color: var(--dse-btn-primary-bg-color, v.$blue-light) !default;
 $btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, v.$blue-dark) !default;
 
-$txt-btn-primary-color: var(
-  --dse-txt-btn-primary-color,
+$btn-txt-color: var(
+  --dse-btn-txt-color,
   v.$blue-light
 ) !default;
-$txt-btn-primary-hover: var(--dse-txt-btn-primary-hover, v.$blue-dark) !default;
+$btn-txt-hover: var(--dse-btn-txt-hover, v.$blue-dark) !default;
 
 /*=====  End of Buttons  ======*/
 

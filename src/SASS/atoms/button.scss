@@ -1,0 +1,36 @@
+@use "../foundation/colors" as c;
+@use "../foundation/typography" as t;
+@use "../foundation/variables" as v;
+
+/*=============================================
+=                   Buttons                   =
+=============================================*/
+.button {
+  cursor: pointer;
+  font-size: t.$fs-base;
+  font-weight: 400;
+  line-height: normal;
+  box-sizing: border-box;
+  border: none;
+  display: inline-block;
+}
+
+/*----------  button primary  ----------*/
+.btn-primary {
+  color: c.$btn-primary-color;
+  background-color: c.$btn-primary-bg-color;
+  padding: v.$spacing-sm v.$spacing-md;
+  &:hover {
+    background-color: c.$btn-primary-bg-hover;
+  }
+}
+.btn-text {
+  color: c.$btn-txt-color;
+  background-color: c.$white;
+  margin-inline: v.$spacing-sm;
+  &:hover {
+    background-color: c.$btn-txt-hover;
+  }
+}
+
+/*=====  End of Buttons  ======*/
