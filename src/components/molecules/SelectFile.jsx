@@ -10,12 +10,28 @@ function SelectFile() {
   const handleFileChange = (event) => {
     const files = event.target.files;
     //hold file in state
-    setFile(files);
+    setFile(files[0]);
     // dispatch to trigger upload
     dispatch(selectFile());
   };
-  
-  return <SelectFileRenderer handleFileChange={handleFileChange} />;
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    // Check if it's actually a valid file
+    if (file && /\.(dcm|dicom)$/i.test(file.name)) {
+      //hold file in state
+      setFile(file);
+      // dispatch to trigger upload
+      dispatch(selectFile());
+    }
+  };
+
+  return (
+    <SelectFileRenderer
+      handleFileChange={handleFileChange}
+      handleDrop={handleDrop}
+    />
+  );
 }
 
 export default SelectFile;

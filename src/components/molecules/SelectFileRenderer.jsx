@@ -5,14 +5,11 @@ import { buttonMode, textMode } from "../../Helper/constants";
 import Text from "../atoms/Text";
 import PropTypes from "prop-types";
 
-function SelectFileRenderer({ handleFileChange }) {
+function SelectFileRenderer({ handleFileChange, handleDrop }) {
   return (
     <div
       className="select-file "
-      onDrop={(e) => {
-        e.preventDefault();
-        console.log(e);
-      }}
+      onDrop={handleDrop}
       onDragOver={(e) => e.preventDefault()}
     >
       <div className="select-file-container">
@@ -29,7 +26,7 @@ function SelectFileRenderer({ handleFileChange }) {
             />
             Click here
           </Button>
-          <Text mode={textMode.title} element={"span"}>
+          <Text mode={textMode.paragraph} element={"span"}>
             to upload your file or drag and drop.
           </Text>
         </div>
@@ -42,6 +39,7 @@ function SelectFileRenderer({ handleFileChange }) {
 }
 SelectFileRenderer.propTypes = {
   handleFileChange: PropTypes.func,
+  handleDrop: PropTypes.func,
 };
 
 export default SelectFileRenderer;
