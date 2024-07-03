@@ -1,0 +1,18 @@
+@use "../foundation/variables";
+
+.modal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(from v.$grey-600 r g b / 0.5);
+  height: 100%;
+  overflow-y: auto;
+  padding: v.$spacing-md;
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  animation: animation-fade-in 0.2s forwards;
+}
