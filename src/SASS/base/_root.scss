@@ -34,7 +34,10 @@
   --dse-select-file-border-color: #{v.$grey-400};
   --dse-select-file-icon-color: #{v.$blue-dark};
   --dse-select-file-icon-bg-color: #{v.$grey-300};
-  --dse-table-bg-color: #{v.$white};
-  --dse-table-delete-icon-color: #{v.$white};
-  --dse-table-title-bg-color: #{v.$grey-600};
+  --dse-patient-table-bg-color: #{v.$white};
+  --dse-patient-table-delete-icon-color: #{v.$red};
+  --dse-patient-table-add-icon-color: #{v.$blue-dark};
+  --dse-patient-table-title-bg-color: #{v.$grey-200};
+  --dse-patient-table-border-color: #{v.$grey-600};
+  --dse-patient-table-cell-font-size: #{v.$fs-xs};
 }

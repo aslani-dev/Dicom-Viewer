@@ -3,6 +3,7 @@ import SelectFile from "../molecules/SelectFile";
 import { store } from "../../store";
 import FileContextProvider from "../../Hooks/FileContextProvider";
 import UploadFile from "../molecules/UploadFile";
+import PatientTable from "./PatientTable";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         >
           <SelectFile />
           <UploadFile />
+          <PatientTable />
         </div>
       </Provider>
     </FileContextProvider>

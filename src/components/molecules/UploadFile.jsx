@@ -2,9 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FileContext } from "../../Hooks/FileContextProvider";
 import axios from "axios";
-import { resetFile, setFileState } from "../../store/slices";
+import { resetFile, setFileState } from "../../store/slices/fileSlice";
 import UploadFileRenderer from "./UploadFileRenderer";
-
 
 function UploadFile() {
   const {
@@ -15,8 +14,6 @@ function UploadFile() {
   } = useSelector((state) => state.fileState);
   const { file } = useContext(FileContext);
   const dispatch = useDispatch();
-
-  
 
   useEffect(() => {
     if (triggerUpload) uploadFile(file);

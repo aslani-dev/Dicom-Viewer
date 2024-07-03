@@ -50,10 +50,7 @@ $input-error-border-color: var(--dse-input-error-border-color, v.$red) !default;
 /*=============================================
 =                  Upload                     =
 =============================================*/
-$upload-file-bg-color: var(
-  --dse-upload-file-bg-color,
-  v.$white
-) !default;
+$upload-file-bg-color: var(--dse-upload-file-bg-color, v.$white) !default;
 $upload-file--color: var(--dse-upload-file-color, v.$black) !default;
 $upload-file-border-color: var(
   --dse-upload-file-border-color,
@@ -124,8 +121,22 @@ $select-file-icon-bg-color: var(
 /*=============================================
 =                 Table colors                =
 =============================================*/
-$table-bg-color: var(--dse-table-bg-color, v.$white) !default;
-$table-delete-icon-color: var(--dse-table-delete-icon-color, v.$white) !default;
-$table-title-bg-color: var(--dse-table-title-bg-color, v.$grey-600) !default;
+$patient-table-bg-color: var(--dse-patient-table-bg-color, v.$white) !default;
+$patient-table-delete-icon-color: var(
+  --dse-patient-table-delete-icon-color,
+  v.$red
+) !default;
+$patient-table-add-icon-color: var(
+  --dse-patient-table-add-icon-color,
+  v.$blue-dark
+) !default;
+$patient-table-title-bg-color: var(
+  --dse-patient-table-title-bg-color,
+  v.$grey-200
+) !default;
+$patient-table-border-color: var(
+  --dse-patient-table-border-color,
+  v.$grey-600
+) !default;
 
 /*=====  End of Table colors  ======*/

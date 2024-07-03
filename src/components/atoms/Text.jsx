@@ -16,6 +16,7 @@ function Text({ children, mode, className, element, ...rest }) {
       "text-pargraph": mode === textMode.paragraph,
       "text-title": mode === textMode.title,
       "text-subtitle": mode === textMode.subTitle,
+      "text-patient-cell": mode === textMode.patientCell,
     },
     className
   );

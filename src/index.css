@@ -58,9 +58,12 @@
   --dse-select-file-border-color: #ccd9e9;
   --dse-select-file-icon-color: #372ce2;
   --dse-select-file-icon-bg-color: #eef2fe;
-  --dse-table-bg-color: #fff;
-  --dse-table-delete-icon-color: #fff;
-  --dse-table-title-bg-color: #f7f7f7;
+  --dse-patient-table-bg-color: #fff;
+  --dse-patient-table-delete-icon-color: #f63f5e;
+  --dse-patient-table-add-icon-color: #372ce2;
+  --dse-patient-table-title-bg-color: #dcdcdc;
+  --dse-patient-table-border-color: #f7f7f7;
+  --dse-patient-table-cell-font-size: 0.75rem;
 }
 
 /*=============================================
@@ -205,6 +208,10 @@ body, #root {
 =============================================*/
 /*=====  End of Heading font sizes  ======*/
 /*=============================================
+=            table fonmt size            =
+=============================================*/
+/*=====  End of table fonmt size  ======*/
+/*=============================================
 =                   Buttons                   =
 =============================================*/
 .button {
@@ -302,6 +309,10 @@ body, #root {
 =============================================*/
 /*=====  End of Heading font sizes  ======*/
 /*=============================================
+=            table fonmt size            =
+=============================================*/
+/*=====  End of table fonmt size  ======*/
+/*=============================================
 =                    Text                     =
 =============================================*/
 .text {
@@ -360,7 +371,80 @@ body, #root {
   color: var(--dse-subtitle-color, #9ca3af);
 }
 
+.text-patient-cell {
+  font-size: var(--dse-patient-table-cell-font-size, 0.75rem);
+  font-weight: var(--dse-patient-table-cell-font-weight, 300);
+}
+
 /*=====  End of Text  ======*/
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+/*=============================================
+=                Global body color            =
+=============================================*/
+/*=====  End of Global body color  ======*/
+/*=============================================
+=                   Typography                =
+=============================================*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                    Buttons                  =
+=============================================*/
+/*=====  End of Buttons  ======*/
+/*=============================================
+=                       Form                  =
+=============================================*/
+/*----------  Form Inputs color  ----------*/
+/*=====  End of Form  ======*/
+/*=============================================
+=                  Upload                     =
+=============================================*/
+/*----------  upload successfull  ----------*/
+/*----------  upload failed  ----------*/
+/*=====  End of Upload  ======*/
+/*=============================================
+=                   Select file               =
+=============================================*/
+/*=====  End of Select file  ======*/
+/*=============================================
+=                 Table colors                =
+=============================================*/
+/*=====  End of Table colors  ======*/
+.patient-table-cell {
+  border: 1px solid var(--dse-patient-table-border-color, #f7f7f7);
+  flex-grow: 0;
+  width: 100%;
+  text-align: left;
+  padding-inline: 0.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /*=============================================
 =                Variables                    =
 =============================================*/
@@ -556,6 +640,159 @@ body, #root {
 
 .upload-failed-icon {
   color: var(--dse-upload-failed-delete-color, #f63f5e);
+}
+
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+.modal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(from #f7f7f7 r g b/0.5);
+  height: 100%;
+  overflow-y: auto;
+  padding: 1.25rem;
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  animation: animation-fade-in 0.2s forwards;
+}
+
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+/*=============================================
+=                Global body color            =
+=============================================*/
+/*=====  End of Global body color  ======*/
+/*=============================================
+=                   Typography                =
+=============================================*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                    Buttons                  =
+=============================================*/
+/*=====  End of Buttons  ======*/
+/*=============================================
+=                       Form                  =
+=============================================*/
+/*----------  Form Inputs color  ----------*/
+/*=====  End of Form  ======*/
+/*=============================================
+=                  Upload                     =
+=============================================*/
+/*----------  upload successfull  ----------*/
+/*----------  upload failed  ----------*/
+/*=====  End of Upload  ======*/
+/*=============================================
+=                   Select file               =
+=============================================*/
+/*=====  End of Select file  ======*/
+/*=============================================
+=                 Table colors                =
+=============================================*/
+/*=====  End of Table colors  ======*/
+.patient-table {
+  display: flex;
+  width: 100%;
+}
+
+.patient-table-container {
+  width: 100%;
+  background-color: var(--dse-patient-table-bg-color, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patient-table-title {
+  background-color: var(--dse-patient-table-title-bg-color, #dcdcdc);
+}
+.patient-table-title .typography {
+  padding-block: 0.25rem;
+}
+
+.patient-icon {
+  max-width: fit-content;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+  min-width: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--dse-patient-table-border-color, #f7f7f7);
+}
+
+.patient-delete {
+  color: var(--dse-patient-table-delete-icon-color, #f63f5e);
+}
+.patient-delete svg {
+  font-size: 0.7954545455rem;
+}
+
+.patient-add {
+  color: var(--dse-patient-table-add-icon-color, #372ce2);
+}
+.patient-add svg {
+  font-size: 1rem;
+}
+
+.patient-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

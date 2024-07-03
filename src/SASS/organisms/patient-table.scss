@@ -1,0 +1,51 @@
+@use "../foundation/colors" as c;
+@use "../foundation/variables" as v;
+
+.patient-table {
+  display: flex;
+  width: 100%;
+}
+
+.patient-table-container {
+  width: 100%;
+  background-color: c.$patient-table-bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.patient-table-title {
+  background-color: c.$patient-table-title-bg-color;
+  & .typography {
+    padding-block: v.$spacing-xxxs;
+  }
+}
+.patient-icon {
+  max-width: fit-content;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+  min-width: v.$spacing-md;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid c.$patient-table-border-color;
+}
+.patient-delete {
+  color: c.$patient-table-delete-icon-color;
+  & svg {
+    font-size: v.$fs-sm/1.1;
+  }
+}
+.patient-add {
+  color: c.$patient-table-add-icon-color;
+  & svg {
+    font-size: v.$fs-base;
+  }
+}
+
+.patient-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

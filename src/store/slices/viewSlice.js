@@ -3,7 +3,7 @@ import { viewInitialState } from "../../Helper/constants";
 
 export const viewSlice = createSlice({
   initialState: viewInitialState,
-  name: viewState,
+  name: "viewState",
   reducers: {
     setView: (state, { payload }) => {
       // payload=string
@@ -12,4 +12,4 @@ export const viewSlice = createSlice({
   },
 });
 
-export const { setView: setModal } = viewSlice.actions;
+export const { setView } = viewSlice.actions;

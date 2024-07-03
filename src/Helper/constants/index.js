@@ -7,6 +7,7 @@ export const textMode = {
   paragraph: "paragraph",
   title: "title",
   subTitle: "sub-title",
+  patientCell: "patient-cell",
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -24,3 +25,31 @@ export const fileInitialState = {
 export const viewInitialState = {
   view: "",
 };
+
+/*----------  patient initial state object  ----------*/
+
+export const patientInitialState = [
+  [
+    "PatientID",
+    "StudyInstanceUID",
+    "SeriesInstanceUID",
+    "Gender",
+    "Date of Study",
+  ],
+  [
+    "PatientID",
+    "StudyInstanceUID",
+    "SeriesInstanceUID",
+    "Gender",
+    "Date of Study",
+  ],
+];
+
+/*----------  patient table title data  ----------*/
+export const patientTitleData = [
+  "PatientID",
+  "StudyInstanceUID",
+  "SeriesInstanceUID ",
+  "Gender",
+  "Date of Study",
+];

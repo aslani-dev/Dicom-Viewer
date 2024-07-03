@@ -1,0 +1,13 @@
+@use "../foundation/colors" as c;
+@use "../foundation/variables" as v;
+
+.patient-table-cell {
+  border: 1px solid c.$patient-table-border-color;
+  flex-grow: 0;
+  width: 100%;
+  text-align: left;
+  padding-inline: v.$spacing-xxxs;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

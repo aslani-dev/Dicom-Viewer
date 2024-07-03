@@ -31,3 +31,14 @@ $h6-font-size: var(--dse-h6-font-size, v.$h-6);
 $h6-font-weight: var(--dse-h6-font-weight, 300);
 
 /*=====  End of Heading font sizes  ======*/
+
+/*=============================================
+=            table fonmt size            =
+=============================================*/
+$patient-table-cell-font-size: var(
+  --dse-patient-table-cell-font-size,
+  v.$fs-xs
+);
+$patient-table-cell-font-weight: var(--dse-patient-table-cell-font-weight, 300);
+
+/*=====  End of table fonmt size  ======*/
