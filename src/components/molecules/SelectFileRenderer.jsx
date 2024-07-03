@@ -5,6 +5,9 @@ import { buttonMode, textMode } from "../../Helper/constants";
 import Text from "../atoms/Text";
 import PropTypes from "prop-types";
 
+
+
+
 function SelectFileRenderer({ handleFileChange, handleDrop }) {
   return (
     <div
