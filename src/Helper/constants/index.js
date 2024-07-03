@@ -21,3 +21,6 @@ export const fileInitialState = {
   isFaildUpload: false,
   uploadProgress: 0,
 };
+export const viewInitialState = {
+  view: "",
+};
