@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { fileSlice, selectFile } from "./slices";
+import { fileSlice, selectFile, setFileState, resetFile } from "./slices";
 
 export const store = configureStore({
   reducer: {
@@ -7,4 +7,4 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
-export { selectFile };
+export { selectFile, setFileState, resetFile };

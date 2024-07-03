@@ -17,8 +17,9 @@
   --dse-input-border-focus-color: #{v.$black};
   --dse-input-error-color: #{v.$red};
   --dse-input-error-border-color: #{v.$red};
-  --dse-upload-container-bg-color: #{v.$white};
-  --dse-upload-container-color: #{v.$black};
+  --dse-upload-file-bg-color: #{v.$white};
+  --dse-upload-file-color: #{v.$black};
+  --dse-upload-file-border-color: #{v.$grey-400};
   --dse-upload-progress-indicator-bg-color: #{v.$blue-dark};
   --dse-upload-progress-track-bg-color: #{v.$grey-200};
   --dse-upload-file-icon-color: #{v.$blue-dark};

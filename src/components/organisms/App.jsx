@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import SelectFile from "../molecules/SelectFile";
 import { store } from "../../store";
 import FileContextProvider from "../../Hooks/FileContextProvider";
+import UploadFile from "../molecules/UploadFile";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           onDrop={(e) => e.preventDefault()}
         >
           <SelectFile />
+          <UploadFile />
         </div>
       </Provider>
     </FileContextProvider>

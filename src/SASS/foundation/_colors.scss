@@ -50,11 +50,15 @@ $input-error-border-color: var(--dse-input-error-border-color, v.$red) !default;
 /*=============================================
 =                  Upload                     =
 =============================================*/
-$upload-container-bg-color: var(
-  --dse-upload-container-bg-color,
+$upload-file-bg-color: var(
+  --dse-upload-file-bg-color,
   v.$white
 ) !default;
-$upload-container--color: var(--dse-upload-container-color, v.$black) !default;
+$upload-file--color: var(--dse-upload-file-color, v.$black) !default;
+$upload-file-border-color: var(
+  --dse-upload-file-border-color,
+  v.$grey-400
+) !default;
 $upload-progress-indicator-color: var(
   --dse-upload-progress-indicator-bg-color,
   v.$blue-dark

@@ -1,0 +1,46 @@
+@use "../foundation/colors" as c;
+@use "../foundation/variables" as v;
+
+.upload-file {
+  background-color: c.$upload-file-bg-color;
+  border: 3px solid c.$upload-file-border-color;
+  color: c.$upload-file--color;
+  border-radius: v.$spacing-sm;
+  padding: v.$spacing-sm v.$spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$spacing-sm;
+}
+.progress {
+  min-width: 100%;
+  position: relative;
+  min-height: v.$spacing-xxxs * 1.3;
+  background-color: c.$upload-progress-track-color;
+  border-radius: v.$spacing-xxxs;
+  margin-block: v.$spacing-xs;
+  overflow: hidden;
+}
+.progress-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-height: v.$spacing-xxxs;
+  min-width: 0.5%;
+  background-color: c.$upload-progress-indicator-color;
+  border-radius: v.$spacing-xxxs;
+}
+
+.progress-indicator-successful {
+  background-color: c.$upload-progress-successfull-color;
+}
+.progress-indicator-failed {
+  background-color: c.$upload-progress-failed-color;
+}
+.upload-successful-icon {
+  color: c.$upload-progress-successfull-color;
+}
+.upload-failed-icon {
+  color: c.$upload-failed-delete-color;
+}

@@ -41,8 +41,9 @@
   --dse-input-border-focus-color: #000;
   --dse-input-error-color: #f63f5e;
   --dse-input-error-border-color: #f63f5e;
-  --dse-upload-container-bg-color: #fff;
-  --dse-upload-container-color: #000;
+  --dse-upload-file-bg-color: #fff;
+  --dse-upload-file-color: #000;
+  --dse-upload-file-border-color: #ccd9e9;
   --dse-upload-progress-indicator-bg-color: #372ce2;
   --dse-upload-progress-track-bg-color: #dcdcdc;
   --dse-upload-file-icon-color: #372ce2;
@@ -319,12 +320,12 @@ body, #root {
 }
 
 .text-h2 {
-  font-size: var(--dse-h2-font-size, 1.75rem);
+  font-size: var(--dse-h2-font-size, 1.25rem);
   font-weight: var(--dse-h2-font-weight, 700);
 }
 
 .text-h3 {
-  font-size: var(--dse-h3-font-size, 1.5rem);
+  font-size: var(--dse-h3-font-size, 1rem);
   font-weight: var(--dse-h3-font-weight, 600);
 }
 
@@ -434,18 +435,127 @@ body, #root {
   align-items: center;
   gap: 0.5rem;
 }
+.select-file-container > .file-icon {
+  margin-bottom: 1.25rem;
+}
 
 .file-icon {
   background-color: var(--dse-select-file-icon-bg-color, #eef2fe);
   color: var(--dse-select-file-icon-color, #372ce2);
   border-radius: 100%;
-  padding: 0.75rem;
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-bottom: 1.25rem;
+  max-width: 2.6rem;
+  min-width: 2.6rem;
+  max-height: 2.6rem;
+  min-height: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+/*=============================================
+=                Global body color            =
+=============================================*/
+/*=====  End of Global body color  ======*/
+/*=============================================
+=                   Typography                =
+=============================================*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                    Buttons                  =
+=============================================*/
+/*=====  End of Buttons  ======*/
+/*=============================================
+=                       Form                  =
+=============================================*/
+/*----------  Form Inputs color  ----------*/
+/*=====  End of Form  ======*/
+/*=============================================
+=                  Upload                     =
+=============================================*/
+/*----------  upload successfull  ----------*/
+/*----------  upload failed  ----------*/
+/*=====  End of Upload  ======*/
+/*=============================================
+=                   Select file               =
+=============================================*/
+/*=====  End of Select file  ======*/
+/*=============================================
+=                 Table colors                =
+=============================================*/
+/*=====  End of Table colors  ======*/
+.upload-file {
+  background-color: var(--dse-upload-file-bg-color, #fff);
+  border: 3px solid var(--dse-upload-file-border-color, #ccd9e9);
+  color: var(--dse-upload-file-color, #000);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.progress {
+  min-width: 100%;
+  position: relative;
+  min-height: 0.325rem;
+  background-color: var(--dse-upload-progress-track-bg-color, #dcdcdc);
+  border-radius: 0.25rem;
+  margin-block: 0.75rem;
+  overflow: hidden;
+}
+
+.progress-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 0.25rem;
+  min-width: 0.5%;
+  background-color: var(--dse-upload-progress-indicator-bg-color, #372ce2);
+  border-radius: 0.25rem;
+}
+
+.progress-indicator-successful {
+  background-color: var(--dse-upload-progress-successfull-color, #21c35c);
+}
+
+.progress-indicator-failed {
+  background-color: var(--dse-upload-progress-failed-color, #f63f5e);
+}
+
+.upload-successful-icon {
+  color: var(--dse-upload-progress-successfull-color, #21c35c);
+}
+
+.upload-failed-icon {
+  color: var(--dse-upload-failed-delete-color, #f63f5e);
 }
 
 /*# sourceMappingURL=index.css.map */

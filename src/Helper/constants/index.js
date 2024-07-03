@@ -15,9 +15,9 @@ export const textMode = {
   h6: "h6",
 };
 export const fileInitialState = {
-  file: "",
   triggerUpload: false,
   isUploadedSuccessfull: false,
   isUploading: false,
   isFaildUpload: false,
+  uploadProgress: 0,
 };
