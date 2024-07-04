@@ -2,9 +2,10 @@ import React from "react";
 import PatientTableCell from "../atoms/PatientTableCell";
 import { patientTitleData } from "../../Helper/constants";
 import { RiDeleteBin7Line } from "react-icons/ri";
-import { MdPlaylistAddCircle } from "react-icons/md";
 import PropTypes from "prop-types";
 import Text from "../atoms/Text";
+import { IoMdAddCircle } from "react-icons/io";
+
 function PatientTableRenderer({
   patientData,
   handleAddPatient,
@@ -41,7 +42,7 @@ function PatientTableRenderer({
         <div className="patient-table-row patient-table-title">
           {titleRender}
           <div className="patient-icon patient-add" onClick={handleAddPatient}>
-            <MdPlaylistAddCircle />
+            <IoMdAddCircle />
           </div>
         </div>
         {tableRender ?? (

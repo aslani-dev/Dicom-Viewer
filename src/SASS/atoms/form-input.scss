@@ -1,0 +1,32 @@
+@use "../foundation/colors" as c;
+@use "../foundation/typography" as t;
+@use "../foundation/variables" as v;
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  // gap: v.$spacing-xxxs;
+  min-width: v.$spacing-xxl * 6;
+  flex-grow: 1;
+}
+.input {
+  color: c.$input-color;
+  font-size: t.$form-input-font-size;
+  height: v.$spacing-xxl;
+  padding: v.$spacing-xxxs v.$spacing-xxs;
+  background-color: #fff;
+  outline: none;
+  border: 1.5px solid c.$input-border-color;
+  border-radius: v.$spacing-xxxs;
+  transition: border-color 0.15s ease-in-out;
+  cursor: text;
+  &:focus {
+    border: 1.5px solid c.$input-border-focus-color;
+    color: c.$input-color;
+  }
+  border: 1.5px solid c.$input-border-color;
+}
+.has-error {
+  color: c.$input-error-color;
+  border-color: c.$input-error-border-color !important;
+}

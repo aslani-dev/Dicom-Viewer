@@ -42,3 +42,10 @@ $patient-table-cell-font-size: var(
 $patient-table-cell-font-weight: var(--dse-patient-table-cell-font-weight, 300);
 
 /*=====  End of table fonmt size  ======*/
+
+/*=============================================
+=            form and input font sizes        =
+=============================================*/
+$form-input-font-size: var(--dse-form-input-font-size, v.$fs-xs);
+
+/*=====  End of form and input font sizes  ======*/

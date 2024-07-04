@@ -212,6 +212,10 @@ body, #root {
 =============================================*/
 /*=====  End of table fonmt size  ======*/
 /*=============================================
+=            form and input font sizes        =
+=============================================*/
+/*=====  End of form and input font sizes  ======*/
+/*=============================================
 =                   Buttons                   =
 =============================================*/
 .button {
@@ -228,7 +232,8 @@ body, #root {
 .btn-primary {
   color: var(--dse-btn-primary-color, #fff);
   background-color: var(--dse-btn-primary-bg-color, #5c4baa);
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 }
 .btn-primary:hover {
   background-color: var(--dse-btn-primary-bg-hover, #372ce2);
@@ -312,6 +317,10 @@ body, #root {
 =            table fonmt size            =
 =============================================*/
 /*=====  End of table fonmt size  ======*/
+/*=============================================
+=            form and input font sizes        =
+=============================================*/
+/*=====  End of form and input font sizes  ======*/
 /*=============================================
 =                    Text                     =
 =============================================*/
@@ -675,7 +684,7 @@ body, #root {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgba(from #f7f7f7 r g b/0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   overflow-y: auto;
   padding: 1.25rem;
@@ -793,6 +802,150 @@ body, #root {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+.create-patient {
+  background-color: white;
+  width: 100%;
+  margin: 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.create-patient .button {
+  min-width: 100%;
+}
+
+/*=============================================
+=                Variables                    =
+=============================================*/
+/*----------  Brand Colors  ----------*/
+/* Blue Colors */
+/* Green */
+/* Red */
+/* Grey */
+/*=============================================
+=                Typography                  =
+=============================================*/
+/*----------  Font Family  ----------*/
+/*=====  End of Font family  ======*/
+/*----------  Font Sizes  ----------*/
+/*=====  End of Font sizes  ======*/
+/*----------  Heading font Sizes  ----------*/
+/*=====  End of Heading font sizes  ======*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=                     Spaces                  =
+=============================================*/
+/*=====  End of Spaces  ======*/
+/*=============================================
+=                Global body color            =
+=============================================*/
+/*=====  End of Global body color  ======*/
+/*=============================================
+=                   Typography                =
+=============================================*/
+/*=====  End of Typography  ======*/
+/*=============================================
+=                    Buttons                  =
+=============================================*/
+/*=====  End of Buttons  ======*/
+/*=============================================
+=                       Form                  =
+=============================================*/
+/*----------  Form Inputs color  ----------*/
+/*=====  End of Form  ======*/
+/*=============================================
+=                  Upload                     =
+=============================================*/
+/*----------  upload successfull  ----------*/
+/*----------  upload failed  ----------*/
+/*=====  End of Upload  ======*/
+/*=============================================
+=                   Select file               =
+=============================================*/
+/*=====  End of Select file  ======*/
+/*=============================================
+=                 Table colors                =
+=============================================*/
+/*=====  End of Table colors  ======*/
+/*=============================================
+=                common font sizes              =
+=============================================*/
+/*=====  End of Body font sizes  ======*/
+/*=============================================
+=            Heading font sizes            =
+=============================================*/
+/*=====  End of Heading font sizes  ======*/
+/*=============================================
+=            table fonmt size            =
+=============================================*/
+/*=====  End of table fonmt size  ======*/
+/*=============================================
+=            form and input font sizes        =
+=============================================*/
+/*=====  End of form and input font sizes  ======*/
+.form-input {
+  display: flex;
+  flex-direction: column;
+  min-width: 12rem;
+  flex-grow: 1;
+}
+
+.input {
+  color: var(--dse-input-color, #000);
+  font-size: var(--dse-form-input-font-size, 0.75rem);
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #fff;
+  outline: none;
+  border: 1.5px solid var(--dse-input-border-color, #ccd9e9);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out;
+  cursor: text;
+  border: 1.5px solid var(--dse-input-border-color, #ccd9e9);
+}
+.input:focus {
+  border: 1.5px solid var(--dse-input-border-focus-color, #000);
+  color: var(--dse-input-color, #000);
+}
+
+.has-error {
+  color: var(--dse-input-error-color, #f63f5e);
+  border-color: var(--dse-input-error-border-color, #f63f5e) !important;
 }
 
 /*# sourceMappingURL=index.css.map */

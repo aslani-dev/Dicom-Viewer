@@ -1,12 +1,11 @@
 import { createPortal } from "react-dom";
 import { useDispatch } from "react-redux";
-import { clear } from "../../store/index";
+import { setView } from "../../store";
 
 function Modal({ children, ...rest }) {
   const dispatch = useDispatch();
   const handleClick = (e) => {
-    e.stopPropagation();
-    dispatch(clear());
+    dispatch(setView(""));
     document.body.style.overflow = "auto";
   };
 

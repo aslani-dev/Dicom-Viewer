@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { patientInitialState } from "../../Helper/constants";
+import { nanoid } from "@reduxjs/toolkit";
 
 export const patientSlice = createSlice({
   initialState: patientInitialState,
@@ -7,7 +8,12 @@ export const patientSlice = createSlice({
   reducers: {
     addPatient: (state, { payload }) => {
       //payload= {...}
-      state.push(payload);
+
+      const values = [nanoid()];
+
+      Object.keys(payload).map((key) => values.push(payload[key]));
+
+      state.push(values);
     },
     removePatient: (state, { payload }) => {
       //payload= id

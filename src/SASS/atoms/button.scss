@@ -19,7 +19,8 @@
 .btn-primary {
   color: c.$btn-primary-color;
   background-color: c.$btn-primary-bg-color;
-  padding: v.$spacing-sm v.$spacing-md;
+  padding: v.$spacing-xxs v.$spacing-sm;
+  border-radius: v.$spacing-xxxs;
   &:hover {
     background-color: c.$btn-primary-bg-hover;
   }
