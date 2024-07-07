@@ -1,9 +1,17 @@
 import React from "react";
 import { FaFileMedical, FaRegCheckCircle } from "react-icons/fa";
+import { RiDeleteBin7Line } from "react-icons/ri";
 import { textMode } from "../../Helper/constants";
 import Text from "../atoms/Text";
-import { RiDeleteBin7Line } from "react-icons/ri";
-import PropTypes from "prop-types";
+
+// Define the interface for UploadFileRenderer props
+interface UploadFileRendererProps {
+  fileName?: string;
+  isUploadedSuccessfull: boolean;
+  isFaildUpload: boolean;
+  handleDelete: React.MouseEventHandler<HTMLDivElement>; // Updated to match the actual handler in the component
+  uploadProgress: number;
+}
 
 function UploadFileRenderer({
   fileName,
@@ -11,17 +19,17 @@ function UploadFileRenderer({
   isFaildUpload,
   handleDelete,
   uploadProgress,
-}) {
+}: UploadFileRendererProps) {
   return (
     <div className="upload-file">
-      <div className={`file-icon `}>
+      <div className="file-icon">
         <FaFileMedical />
       </div>
-      <div className="w-full ">
+      <div className="w-full">
         <div className="flex justify-between">
           <Text mode={textMode.h3}>{fileName}</Text>
           <div
-            className={` cursor-pointer ${
+            className={`cursor-pointer ${
               isUploadedSuccessfull
                 ? "upload-successful-icon"
                 : isFaildUpload
@@ -37,16 +45,16 @@ function UploadFileRenderer({
             )}
           </div>
         </div>
-        <div className={`progress `}>
+        <div className="progress">
           <span
-            className={`progress-indicator  ${
+            className={`progress-indicator ${
               isUploadedSuccessfull
                 ? "progress-indicator-successful"
                 : isFaildUpload
                 ? "progress-indicator-failed"
                 : ""
             }`}
-            style={{ width: uploadProgress + "%" }}
+            style={{ width: `${uploadProgress}%` }}
           ></span>
         </div>
         <div className="flex justify-between">
@@ -63,7 +71,7 @@ function UploadFileRenderer({
             {isUploadedSuccessfull
               ? "Upload successful!"
               : isFaildUpload
-              ? "Sorry, Upload was faild"
+              ? "Sorry, Upload failed"
               : "Uploading"}
           </Text>
           <Text>{uploadProgress}%</Text>
@@ -72,12 +80,5 @@ function UploadFileRenderer({
     </div>
   );
 }
-UploadFileRenderer.propTypes = {
-  fileName: PropTypes?.string,
-  isUploadedSuccessfull: PropTypes.bool,
-  isFaildUpload: PropTypes.bool,
-  handleDelete: PropTypes.func,
-  uploadProgress: PropTypes.number,
-};
 
 export default UploadFileRenderer;

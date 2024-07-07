@@ -1,22 +1,25 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useForm } from "react-hook-form";
-import { addPatient } from "../../store";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { addPatient } from "../../Store";
 import CreatePatientForm from "./CreatePatientForm";
+import { ViewInitialState } from "../../Helper/constants";
 
 function CreatePatient() {
-  const viewState = useSelector((state) => state.viewState);
+  const viewState: ViewInitialState = useSelector(
+    (state: any) => state.viewState
+  );
   const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     formState: { errors: formErrors },
-  } = useForm();
+  } = useForm<any>(); // Specify form data type here
 
-  const handleFormSubmit = (e) => {
-    dispatch(addPatient(e));
+  const handleFormSubmit: SubmitHandler<any> = (formData) => {
+    dispatch(addPatient(formData));
   };
-  
-  if (viewState.view !== "create-patient") return;
+
+  if (viewState.view !== "create-patient") return null;
   return (
     <CreatePatientForm
       handleFormSubmit={handleFormSubmit}

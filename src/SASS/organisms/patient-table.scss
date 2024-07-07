@@ -1,5 +1,6 @@
 @use "../foundation/colors" as c;
 @use "../foundation/variables" as v;
+@use 'sass:math';
 
 .patient-table {
   display: flex;
@@ -33,7 +34,7 @@
 .patient-delete {
   color: c.$patient-table-delete-icon-color;
   & svg {
-    font-size: v.$fs-sm/1.1;
+    font-size: math.div(v.$fs-sm, 1.1);
   }
 }
 .patient-add {

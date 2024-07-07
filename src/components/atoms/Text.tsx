@@ -1,11 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { FC, ElementType, ReactNode } from "react";
 import { textMode } from "../../Helper/constants";
 import classNames from "classnames";
 
-function Text({ children, mode, className, element, ...rest }) {
+
+interface TextProps {
+  children: ReactNode;
+  className?: string;
+  element?: ElementType;
+  mode?: textMode; // Ensure mode is one of the keys from textMode
+  [key: string]: any; // To capture any other props
+}
+
+const Text: FC<TextProps> = ({
+  children,
+  mode,
+  className,
+  element,
+  ...rest
+}) => {
   const classes = classNames(
-    "typography ",
+    "typography",
     {
       "text-h1": mode === textMode.h1,
       "text-h2": mode === textMode.h2,
@@ -13,36 +27,21 @@ function Text({ children, mode, className, element, ...rest }) {
       "text-h4": mode === textMode.h4,
       "text-h5": mode === textMode.h5,
       "text-h6": mode === textMode.h6,
-      "text-pargraph": mode === textMode.paragraph,
+      "text-paragraph": mode === textMode.paragraph,
       "text-title": mode === textMode.title,
       "text-subtitle": mode === textMode.subTitle,
       "text-patient-cell": mode === textMode.patientCell,
     },
     className
   );
-  const TextElement = element ?? "p";
+
+  const TextElement: ElementType = element ?? "p";
+
   return (
     <TextElement className={classes} {...rest}>
       {children}
     </TextElement>
   );
-}
-
-Text.propTypes = {
-  children: PropTypes.any,
-  className: PropTypes.string,
-  rest: PropTypes.any,
-  element: PropTypes.oneOf([
-    "p",
-    "span",
-    "div",
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6",
-  ]),
-  mode: PropTypes.oneOf(Object.keys(textMode).map((key) => textMode[key])),
 };
+
 export default Text;

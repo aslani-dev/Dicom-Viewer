@@ -1,15 +1,26 @@
-import React from "react";
 import Modal from "./Modal";
 import FormInput from "../atoms/FormInput";
 import Button from "../atoms/Button";
 import { buttonMode } from "../../Helper/constants";
+import {
+  SubmitHandler,
+  UseFormHandleSubmit,
+  UseFormRegister,
+} from "react-hook-form";
+
+interface CreatePatientFormProps {
+  handleSubmit: UseFormHandleSubmit<any>; // Adjust any if specific form data type is used
+  handleFormSubmit: SubmitHandler<any>; // Adjust any if specific form data type is used
+  register: UseFormRegister<any>; // Adjust any if specific form data type is used
+  formErrors: Record<string, any>; // Adjust any if specific form errors type is used
+}
 
 function CreatePatientForm({
   handleSubmit,
   handleFormSubmit,
   register,
   formErrors,
-}) {
+}: CreatePatientFormProps) {
   return (
     <Modal>
       <form

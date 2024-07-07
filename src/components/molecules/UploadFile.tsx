@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FileContext } from "../../Hooks/FileContextProvider";
 import axios from "axios";
-import { resetFile, setFileState } from "../../store/slices/fileSlice";
+import { resetFile, setFileState } from "../../Store";
 import UploadFileRenderer from "./UploadFileRenderer";
+import { FileInitialState } from "../../Helper/constants";
 
 function UploadFile() {
   const {
@@ -11,21 +12,21 @@ function UploadFile() {
     isUploadedSuccessfull,
     uploadProgress,
     isFaildUpload,
-  } = useSelector((state) => state.fileState);
+  }: FileInitialState = useSelector((state: any) => state.fileState);
   const { file } = useContext(FileContext);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (triggerUpload) uploadFile(file);
+    if (triggerUpload && file) uploadFile(file);
   }, [triggerUpload]);
 
   if (!triggerUpload) {
     return;
   }
-  const handleDelete = (e) => {
+  const handleDelete = () => {
     dispatch(resetFile());
   };
-  const uploadFile = (file) => {
+  const uploadFile = (file: File) => {
     const formData = new FormData();
     formData.append("file", file);
     axios
@@ -35,12 +36,12 @@ function UploadFile() {
         },
         onUploadProgress: (progressEvent) => {
           const progress = Math.round(
-            (progressEvent.loaded * 100) / progressEvent.total
-          );
-          dispatch(setFileState([{ path: "uploadProgress", value: progress }]));
+            (progressEvent.loaded * 100) / (progressEvent.total ?? 1)
+            );
+            dispatch(setFileState([{ path: "uploadProgress", value: progress }]));
         },
       })
-      .then((response) => {
+      .then(() => {
         dispatch(
           setFileState([
             { path: "isUploadedSuccessfull", value: true },
@@ -49,7 +50,7 @@ function UploadFile() {
           ])
         );
       })
-      .catch((error) => {
+      .catch(() => {
         dispatch(
           setFileState([
             { path: "isUploadedSuccessfull", value: false },

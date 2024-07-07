@@ -1,13 +1,21 @@
+import { FC } from "react";
 import { textMode } from "../../Helper/constants";
 import Text from "../atoms/Text";
-import PropTypes from "prop-types";
 
-const FormInput = ({
+interface FormInputProps {
+  name: string;
+  type?: string;
+  placeholder?: string;
+  validation?: any;
+  errors?: Record<string, any>;
+}
+
+const FormInput: FC<FormInputProps> = ({
   name,
   type = "text",
   placeholder,
   validation,
-  errors,
+  errors = {},
 }) => {
   return (
     <div className="form-input">
@@ -31,11 +39,4 @@ const FormInput = ({
   );
 };
 
-FormInput.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-  validation: PropTypes.any,
-  errors: PropTypes.any,
-};
 export default FormInput;
