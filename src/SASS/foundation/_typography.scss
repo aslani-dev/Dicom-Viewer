@@ -6,7 +6,7 @@
 $body-font-size: var(--dse-body-font-size, v.$fs-base);
 $body-font-weight: var(--dse-body-font-weight, 400);
 
-$title-font-size: var(--dse-title-font-size, v.$fs-xxl);
+$title-font-size: var(--dse-title-font-size, v.$fs-lg);
 $title-font-weight: var(--dse-title-font-weight, 600);
 
 $subtitle-font-size: var(--dse-subtitle-font-size, v.$fs-sm);
@@ -37,7 +37,7 @@ $h6-font-weight: var(--dse-h6-font-weight, 300);
 =============================================*/
 $patient-table-cell-font-size: var(
   --dse-patient-table-cell-font-size,
-  v.$fs-xs
+  v.$fs-sm
 );
 $patient-table-cell-font-weight: var(--dse-patient-table-cell-font-weight, 300);
 
@@ -46,6 +46,6 @@ $patient-table-cell-font-weight: var(--dse-patient-table-cell-font-weight, 300);
 /*=============================================
 =            form and input font sizes        =
 =============================================*/
-$form-input-font-size: var(--dse-form-input-font-size, v.$fs-xs);
+$form-input-font-size: var(--dse-form-input-font-size, v.$fs-sm);
 
 /*=====  End of form and input font sizes  ======*/

@@ -13,11 +13,17 @@
 }
 
 @mixin tablet {
-  @media (min-width: map.get(v.$breakpoints, "md")) {
+  @media (max-width: map.get(v.$breakpoints, "md")) {
     @content;
   }
 }
-@function toRGBA($color, $opacity) {
-  @return "rgba(" + red($color) + ", " + green($color) + ", " + blue($color) +
-    $opacity ")";
+@mixin laptop {
+  @media (max-width: map.get(v.$breakpoints, "lg")) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: map.get(v.$breakpoints, "xl")) {
+    @content;
+  }
 }

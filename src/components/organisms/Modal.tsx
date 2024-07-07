@@ -18,7 +18,7 @@ function Modal({ children, ...rest }: ModalProps) {
 
   return createPortal(
     <div onClick={handleClick} className="modal" {...rest}>
-      {children}
+      <div className="modal-content">{children}</div>
     </div>,
     document.body
   );

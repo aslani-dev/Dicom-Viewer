@@ -13,7 +13,6 @@ export enum textMode {
   h6,
 }
 
-
 // Define the constants with appropriate types
 export enum buttonMode {
   text,
@@ -27,8 +26,6 @@ export interface ViewInitialState {
 // Define the types for the patient initial state and patient title data
 export type PatientInitialState = string[][];
 type PatientTitleData = string[];
-
-
 
 export const viewInitialState: ViewInitialState = {
   view: "",
@@ -50,22 +47,7 @@ export const fileInitialState: FileInitialState = {
   uploadProgress: 0,
 };
 /*----------  patient initial state object  ----------*/
-export const patientInitialState: PatientInitialState = [
-  [
-    "PatientID",
-    "StudyInstanceUID",
-    "SeriesInstanceUID",
-    "Gender",
-    "Date of Study",
-  ],
-  [
-    "PatientID",
-    "StudyInstanceUID",
-    "SeriesInstanceUID",
-    "Gender",
-    "Date of Study",
-  ],
-];
+export const patientInitialState: PatientInitialState = [];
 
 /*----------  patient table title data  ----------*/
 export const patientTitleData: PatientTitleData = [

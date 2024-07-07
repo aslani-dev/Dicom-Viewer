@@ -1,6 +1,7 @@
 @use "../foundation/colors" as c;
 @use "../foundation/variables" as v;
-@use "../foundation/mixins" as m;
+
+
 .select-file {
   background-color: c.$select-file-bg-color;
   border-radius: v.$spacing-sm;

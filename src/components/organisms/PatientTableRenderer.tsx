@@ -37,7 +37,6 @@ const PatientTableRenderer: React.FC<PatientTableRendererProps> = ({
       </div>
     </div>
   ));
-
   return (
     <div className="patient-table" {...rest}>
       <div className=""></div>
@@ -48,8 +47,10 @@ const PatientTableRenderer: React.FC<PatientTableRendererProps> = ({
             <IoMdAddCircle />
           </div>
         </div>
-        {tableRender ?? (
+        {tableRender.length === 0 ? (
           <Text>Sorry you haven't registered any patient data until now</Text>
+        ) : (
+          tableRender
         )}
       </div>
     </div>

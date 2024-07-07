@@ -14,6 +14,7 @@ const App: React.FC = () => {
     <FileContextProvider>
       <Provider store={store}>
         <div
+        className="app"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => e.preventDefault()}
         >

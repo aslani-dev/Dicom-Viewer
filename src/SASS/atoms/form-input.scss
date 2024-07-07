@@ -6,8 +6,9 @@
   display: flex;
   flex-direction: column;
   // gap: v.$spacing-xxxs;
-  min-width: v.$spacing-xxl * 6;
+  min-width: v.$spacing-xxl * 8;
   flex-grow: 1;
+  width: 45%;
 }
 .input {
   color: c.$input-color;

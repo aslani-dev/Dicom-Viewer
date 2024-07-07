@@ -63,7 +63,7 @@
   --dse-patient-table-add-icon-color: #372ce2;
   --dse-patient-table-title-bg-color: #dcdcdc;
   --dse-patient-table-border-color: #f7f7f7;
-  --dse-patient-table-cell-font-size: 0.75rem;
+  --dse-patient-table-cell-font-size: 0.875rem;
 }
 
 /*=============================================
@@ -123,9 +123,18 @@
 =                 Table colors                =
 =============================================*/
 /*=====  End of Table colors  ======*/
+html,
 body,
 #root {
   background-color: var(--dse-body-bg-color, #fff1f1);
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    font-size: 12px;
+  }
 }
 
 #root {
@@ -144,6 +153,14 @@ body,
   width: 80vw;
   height: 80vh;
   margin: auto;
+}
+
+.app {
+  max-width: 1280px !important;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
 @tailwind base;
@@ -377,7 +394,7 @@ body,
 }
 
 .text-title {
-  font-size: var(--dse-title-font-size, 1.5rem);
+  font-size: var(--dse-title-font-size, 1.125rem);
   font-weight: var(--dse-title-font-weight, 600);
 }
 
@@ -388,7 +405,7 @@ body,
 }
 
 .text-patient-cell {
-  font-size: var(--dse-patient-table-cell-font-size, 0.75rem);
+  font-size: var(--dse-patient-table-cell-font-size, 0.875rem);
   font-weight: var(--dse-patient-table-cell-font-weight, 300);
 }
 
@@ -701,6 +718,15 @@ body,
   animation: animation-fade-in 0.2s forwards;
 }
 
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1280px;
+}
+
 /*=============================================
 =                Variables                    =
 =============================================*/
@@ -783,7 +809,7 @@ body,
   text-align: center;
   height: 100%;
   cursor: pointer;
-  min-width: 1.25rem;
+  min-width: 1.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -794,14 +820,14 @@ body,
   color: var(--dse-patient-table-delete-icon-color, #f63f5e);
 }
 .patient-delete svg {
-  font-size: 0.7954545455rem;
+  font-size: 1rem;
 }
 
 .patient-add {
   color: var(--dse-patient-table-add-icon-color, #372ce2);
 }
 .patient-add svg {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .patient-table-row {
@@ -928,13 +954,14 @@ body,
 .form-input {
   display: flex;
   flex-direction: column;
-  min-width: 12rem;
+  min-width: 16rem;
   flex-grow: 1;
+  width: 45%;
 }
 
 .input {
   color: var(--dse-input-color, #000);
-  font-size: var(--dse-form-input-font-size, 0.75rem);
+  font-size: var(--dse-form-input-font-size, 0.875rem);
   height: 2rem;
   padding: 0.25rem 0.5rem;
   background-color: #fff;

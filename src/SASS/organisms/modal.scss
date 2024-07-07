@@ -16,3 +16,11 @@
   z-index: 1002;
   animation: animation-fade-in 0.2s forwards;
 }
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1280px;
+}

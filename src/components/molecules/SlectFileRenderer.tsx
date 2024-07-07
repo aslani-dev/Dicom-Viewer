@@ -32,9 +32,11 @@ function SelectFileRenderer({
               className="absolute inset-0 z-10 opacity-0"
               onChange={handleFileChange}
             />
-            Click here
+            <Text mode={textMode.title} element="span">
+              Click here
+            </Text>
           </Button>
-          <Text mode={textMode.paragraph} element="span">
+          <Text mode={textMode.title} element="span">
             to upload your file or drag and drop.
           </Text>
         </div>

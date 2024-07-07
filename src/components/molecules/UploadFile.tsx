@@ -46,9 +46,7 @@ function UploadFile() {
         },
       })
       .then(() => {
-        dispatch(
-          setSuccessful()
-        );
+        dispatch(setSuccessful());
       })
       .catch(() => {
         dispatch(
