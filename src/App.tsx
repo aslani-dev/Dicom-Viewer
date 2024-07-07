@@ -7,6 +7,7 @@ import "./index.css";
 import UploadFile from "./components/molecules/UploadFile";
 import CreatePatient from "./components/organisms/CreatePatient";
 import PatientTable from "./components/organisms/PatientTable";
+import DicomViewer from "./components/organisms/Dicom";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
           <UploadFile />
           <PatientTable />
           <CreatePatient />
-          {/* <DicomViewer />  */}
+          <DicomViewer />
         </div>
       </Provider>
     </FileContextProvider>

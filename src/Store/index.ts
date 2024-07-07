@@ -6,6 +6,7 @@ import {
   selectFile,
   setFileState,
   resetFile,
+  setSuccessful,
 } from "./Slices/fileSlice";
 
 import { viewSlice, setView } from "./Slices/viewSlice";
@@ -40,4 +41,5 @@ export {
   setView,
   addPatient,
   removePatient,
+  setSuccessful,
 };

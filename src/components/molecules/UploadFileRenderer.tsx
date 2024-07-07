@@ -1,6 +1,7 @@
 import React from "react";
-import { FaFileMedical, FaRegCheckCircle } from "react-icons/fa";
+import { FaFileMedical } from "react-icons/fa";
 import { RiDeleteBin7Line } from "react-icons/ri";
+import { MdRemoveRedEye } from "react-icons/md";
 import { textMode } from "../../Helper/constants";
 import Text from "../atoms/Text";
 
@@ -9,8 +10,9 @@ interface UploadFileRendererProps {
   fileName?: string;
   isUploadedSuccessfull: boolean;
   isFaildUpload: boolean;
-  handleDelete: React.MouseEventHandler<HTMLDivElement>; // Updated to match the actual handler in the component
+  handleDelete: React.MouseEventHandler<HTMLDivElement>;
   uploadProgress: number;
+  handleShowDicom: React.MouseEventHandler<HTMLDivElement>;
 }
 
 function UploadFileRenderer({
@@ -19,6 +21,7 @@ function UploadFileRenderer({
   isFaildUpload,
   handleDelete,
   uploadProgress,
+  handleShowDicom,
 }: UploadFileRendererProps) {
   return (
     <div className="upload-file">
@@ -36,13 +39,9 @@ function UploadFileRenderer({
                 ? "upload-failed-icon"
                 : ""
             }`}
-            onClick={handleDelete}
+            onClick={isUploadedSuccessfull ? handleShowDicom : handleDelete}
           >
-            {isUploadedSuccessfull ? (
-              <FaRegCheckCircle />
-            ) : (
-              <RiDeleteBin7Line />
-            )}
+            {isUploadedSuccessfull ? <MdRemoveRedEye /> : <RiDeleteBin7Line />}
           </div>
         </div>
         <div className="progress">

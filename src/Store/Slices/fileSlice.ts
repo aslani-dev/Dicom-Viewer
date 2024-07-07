@@ -22,10 +22,16 @@ export const fileSlice = createSlice({
       });
       return { ...temp };
     },
+    setSuccessful: (state: FileInitialState) => {
+      state.uploadProgress = 100;
+      state.isUploadedSuccessfull = true;
+      state.isFaildUpload = false;
+    },
     resetFile: () => fileInitialState,
   },
 });
 
-export const { selectFile, setFileState, resetFile } = fileSlice.actions;
+export const { selectFile, setFileState, resetFile, setSuccessful } =
+  fileSlice.actions;
 
 export default fileSlice.reducer;

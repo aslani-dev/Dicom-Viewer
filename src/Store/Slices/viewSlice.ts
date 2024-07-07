@@ -1,17 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { viewInitialState } from "../../Helper/constants";
 import { addPatient } from "./patientSlice";
-
-// Define the interface for the view initial state
-interface ViewState {
-  view: string;
-}
-
-const initialState: ViewState = viewInitialState;
+import { setFileState, setSuccessful } from "..";
 
 export const viewSlice = createSlice({
   name: "viewState",
-  initialState,
+  initialState: viewInitialState,
   reducers: {
     setView: (state, action: PayloadAction<string>) => {
       // Payload should be a string representing the view
@@ -25,6 +19,9 @@ export const viewSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(addPatient, (state) => {
       state.view = "";
+    });
+    builder.addCase(setSuccessful, (state) => {
+      state.view = "dicom";
     });
   },
 });

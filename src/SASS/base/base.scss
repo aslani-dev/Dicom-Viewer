@@ -1,5 +1,6 @@
-@use '../foundation/colors' as c;
-body,#root{
+@use "../foundation/colors" as c;
+body,
+#root {
   background-color: c.$body-bg-color;
 }
 #root {
@@ -7,10 +8,15 @@ body,#root{
   padding: 2rem;
   text-align: center;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#content {
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
 }
 @tailwind base;
 @tailwind components;

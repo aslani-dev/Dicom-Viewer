@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FileContext } from "../../Hooks/FileContextProvider";
 import axios from "axios";
-import { resetFile, setFileState } from "../../Store";
+import { resetFile, setFileState, setSuccessful, setView } from "../../Store";
 import UploadFileRenderer from "./UploadFileRenderer";
 import { FileInitialState } from "../../Helper/constants";
 
@@ -26,6 +26,10 @@ function UploadFile() {
   const handleDelete = () => {
     dispatch(resetFile());
   };
+
+  const handleShowDicom = () => {
+    dispatch(setView("dicom"));
+  };
   const uploadFile = (file: File) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -37,17 +41,13 @@ function UploadFile() {
         onUploadProgress: (progressEvent) => {
           const progress = Math.round(
             (progressEvent.loaded * 100) / (progressEvent.total ?? 1)
-            );
-            dispatch(setFileState([{ path: "uploadProgress", value: progress }]));
+          );
+          dispatch(setFileState([{ path: "uploadProgress", value: progress }]));
         },
       })
       .then(() => {
         dispatch(
-          setFileState([
-            { path: "isUploadedSuccessfull", value: true },
-            { path: "isFaildUpload", value: false },
-            { path: "uploadProgress", value: 100 },
-          ])
+          setSuccessful()
         );
       })
       .catch(() => {
@@ -67,6 +67,7 @@ function UploadFile() {
       isFaildUpload={isFaildUpload}
       isUploadedSuccessfull={isUploadedSuccessfull}
       uploadProgress={uploadProgress}
+      handleShowDicom={handleShowDicom}
     />
   );
 }
