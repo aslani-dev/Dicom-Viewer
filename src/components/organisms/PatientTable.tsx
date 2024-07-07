@@ -1,12 +1,10 @@
-
 import { useDispatch, useSelector } from "react-redux";
-
 import { removePatient, setView } from "../../Store";
 import PatientTableRenderer from "./PatientTableRenderer";
 
-interface PatientTableProps {}
 
-function PatientTable({}: PatientTableProps) {
+
+function PatientTable() {
   const patientData = useSelector((state: any) => state.patientState);
   const dispatch = useDispatch();
 

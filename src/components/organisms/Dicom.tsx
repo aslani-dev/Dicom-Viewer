@@ -5,7 +5,7 @@ import DicomViewverRenderer from "./DicomViewerRenderer";
 
 function DicomViewer() {
   const { file } = useContext(FileContext);
-  const view = useSelector((state: any) => state.viewState.view);
+  const view = useSelector((state: any) => state.viewState);
   if (!file || view !== "dicom") return;
   return <DicomViewverRenderer file={file} />;
 }

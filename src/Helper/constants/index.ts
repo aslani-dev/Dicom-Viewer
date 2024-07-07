@@ -19,17 +19,12 @@ export enum buttonMode {
   primary,
 }
 
-export interface ViewInitialState {
-  view: string;
-}
 
 // Define the types for the patient initial state and patient title data
 export type PatientInitialState = string[][];
 type PatientTitleData = string[];
 
-export const viewInitialState: ViewInitialState = {
-  view: "",
-};
+
 // Define the interfaces for the file and view initial states
 export interface FileInitialState {
   triggerUpload: boolean;

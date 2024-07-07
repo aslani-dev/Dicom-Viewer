@@ -1,27 +1,28 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { viewInitialState } from "../../Helper/constants";
 import { addPatient } from "./patientSlice";
-import { setFileState, setSuccessful } from "..";
+import { setSuccessful } from "..";
+
+
 
 export const viewSlice = createSlice({
   name: "viewState",
-  initialState: viewInitialState,
+  initialState: "",
   reducers: {
-    setView: (state, action: PayloadAction<string>) => {
+    setView: (_, action: PayloadAction<string>) => {
       // Payload should be a string representing the view
       const payload = action.payload;
-      if (payload === "create-patient") {
+      if (payload) {
         document.body.style.overflow = "hidden";
       }
-      state.view = payload;
+      return payload;
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(addPatient, (state) => {
-      state.view = "";
+    builder.addCase(addPatient, (_) => {
+      return "";
     });
-    builder.addCase(setSuccessful, (state) => {
-      state.view = "dicom";
+    builder.addCase(setSuccessful, (_) => {
+      return "dicom";
     });
   },
 });

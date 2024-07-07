@@ -2,12 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { addPatient } from "../../Store";
 import CreatePatientForm from "./CreatePatientForm";
-import { ViewInitialState } from "../../Helper/constants";
 
 function CreatePatient() {
-  const viewState: ViewInitialState = useSelector(
-    (state: any) => state.viewState
-  );
+  const view: string = useSelector((state: any) => state.viewState);
   const dispatch = useDispatch();
   const {
     register,
@@ -19,7 +16,7 @@ function CreatePatient() {
     dispatch(addPatient(formData));
   };
 
-  if (viewState.view !== "create-patient") return null;
+  if (view !== "create-patient") return null;
   return (
     <CreatePatientForm
       handleFormSubmit={handleFormSubmit}

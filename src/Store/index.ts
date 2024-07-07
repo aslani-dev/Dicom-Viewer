@@ -11,12 +11,12 @@ import {
 
 import { viewSlice, setView } from "./Slices/viewSlice";
 import { patientSlice, addPatient, removePatient } from "./Slices/patientSlice";
-import { FileInitialState, PatientInitialState, ViewInitialState } from "../Helper/constants";
+import { FileInitialState, PatientInitialState } from "../Helper/constants";
 
 // Define the combined state type for the entire store
 export interface RootState {
   fileState: FileInitialState;
-  viewState: ViewInitialState;
+  viewState: string;
   patientState: PatientInitialState;
 }
 
