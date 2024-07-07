@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import FileContextProvider from "./Hooks/FileContextProvider";
+import DicomContextProvider from "./Hooks/FileContextProvider";
 import { store } from "./Store";
 import SelectFile from "./components/molecules/SelectFile";
 import "./index.css";
@@ -11,10 +11,10 @@ import DicomViewer from "./components/organisms/Dicom";
 
 const App: React.FC = () => {
   return (
-    <FileContextProvider>
+    <DicomContextProvider>
       <Provider store={store}>
         <div
-        className="app"
+          className="app"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => e.preventDefault()}
         >
@@ -25,7 +25,7 @@ const App: React.FC = () => {
           <DicomViewer />
         </div>
       </Provider>
-    </FileContextProvider>
+    </DicomContextProvider>
   );
 };
 

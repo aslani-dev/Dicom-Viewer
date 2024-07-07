@@ -1,30 +1,30 @@
 import React, { createContext, useState, ReactNode } from "react";
 
 // Define the type for the context value
-interface FileContextType {
+interface DicomContextType {
   file: File | undefined;
   setFile: React.Dispatch<React.SetStateAction<File | undefined>>;
 }
 
 // Create the context with initial values
-export const FileContext = createContext<FileContextType>({
+export const DicomContext = createContext<DicomContextType>({
   file: undefined,
   setFile: () => {},
 });
 
 // Define the props interface for FileContextProvider component
-interface FileContextProviderProps {
+interface DicomContextProviderProps {
   children: ReactNode;
 }
 
-function FileContextProvider({ children }: FileContextProviderProps) {
+function DicomContextProvider({ children }: DicomContextProviderProps) {
   const [file, setFile] = useState<File | undefined>();
 
   return (
-    <FileContext.Provider value={{ file, setFile }}>
+    <DicomContext.Provider value={{ file, setFile }}>
       {children}
-    </FileContext.Provider>
+    </DicomContext.Provider>
   );
 }
 
-export default FileContextProvider;
+export default DicomContextProvider;

@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FileContext } from "../../Hooks/FileContextProvider";
+import { DicomContext } from "../../Hooks/FileContextProvider";
 import axios from "axios";
 import { resetFile, setFileState, setSuccessful, setView } from "../../Store";
 import UploadFileRenderer from "./UploadFileRenderer";
@@ -13,7 +13,7 @@ function UploadFile() {
     uploadProgress,
     isFaildUpload,
   }: FileInitialState = useSelector((state: any) => state.fileState);
-  const { file } = useContext(FileContext);
+  const { file } = useContext(DicomContext);
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
-import { FileContext } from "../../Hooks/FileContextProvider";
+import { DicomContext } from "../../Hooks/FileContextProvider";
 import { selectFile } from "../../Store/Slices/fileSlice";
 import SelectFileRenderer from "./SlectFileRenderer";
 
 function SelectFile() {
   const dispatch = useDispatch();
-  const { setFile } = useContext(FileContext);
+  const { setFile } = useContext(DicomContext);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
